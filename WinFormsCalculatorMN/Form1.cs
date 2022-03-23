@@ -2,119 +2,130 @@ namespace WinFormsCalculatorMN
 {
     public partial class Form1 : Form
     {
-        double firstNum, secondNum;
-        string op = "";
-        bool isOpClicked = false;
+        public string currentBuffer = "";
+        string expression = "";
+        System.Globalization.CultureInfo ci = System.Threading.Thread.CurrentThread.CurrentCulture;
+        //double firstNum, secondNum;
+        //string op = "";
+        //bool isOpClicked = false;
+
+        // ToDo: Make more robust regarding text on buttons, e g test for valid numbers and operands.
 
         public Form1()
         {
             InitializeComponent();
         }
 
-
-
-        private void btnDec_Click(object sender, EventArgs e)
+        private void updateDisplay() // The update mechanism could be improved - events, yada yada
         {
-            if (btnDec.Text == ".")
-            {
-                if (!txtDisplay.Text.Contains(","))
-                {
-                    txtDisplay.Text = txtDisplay.Text + ",";
-                }
-            }
-
+            txtDisplay.Text = currentBuffer;
         }
 
-        private void btnPlusMinus_Click(object sender, EventArgs e)
+        public void btnDec_Click(object sender, EventArgs e)
         {
-            double q = Convert.ToDouble(txtDisplay.Text);
-            txtDisplay.Text = Convert.ToString(-1 * q);
-        }
-
-        private void btnC_Click(object sender, EventArgs e)
-        {
-            txtDisplay.Text = "0";
-        }
-
-        private void btnNum_Click(object sender, EventArgs e)
-        {
-            
-            if ((txtDisplay.Text == "0") || (isOpClicked))
+            if (!currentBuffer.Contains(ci.NumberFormat.NumberDecimalSeparator))
             {
-                txtDisplay.Clear();
-            }
-            Button button = (Button)sender;
-            txtDisplay.Text = txtDisplay.Text + button.Text;
-            isOpClicked = false;
-        }
-
-
-        private void btnBackSpace_Click(object sender, EventArgs e)
-        {
-            if (txtDisplay.Text.Length > 0)
-            {
-                txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1, 1);
-            }
-
-            if (txtDisplay.Text == "")
-            {
-                txtDisplay.Text = "0";
+                currentBuffer = currentBuffer + ci.NumberFormat.NumberDecimalSeparator;
+                updateDisplay();
             }
         }
 
-        private void btnOper_Click(object sender, EventArgs e)
+        public void btnPlusMinus_Click(object sender, EventArgs e)
         {
-          
-            
-            if (Double.TryParse(txtDisplay.Text, out firstNum))
+            if(currentBuffer[0] != '-')
             {
-                Button button = (Button)sender;
-                op = button.Text;
-                isOpClicked = true;
-                txtDisplay.Text = "";
-            } else
-            {
-                txtDisplay.Text = "";
+                currentBuffer = "-" + currentBuffer;
             }
+            else
+            {
+                currentBuffer = currentBuffer.Substring(1, currentBuffer.Length - 1);
+            }
+            updateDisplay();
+            //double q = Convert.ToDouble(txtDisplay.Text);
+            //txtDisplay.Text = Convert.ToString(-1 * q);
+        }
+
+        public void btnC_Click(object sender, EventArgs e)
+        {
+            currentBuffer = "";
+            expression = "";
+            updateDisplay();
+        }
+        public void btnCE_Click(object sender, EventArgs e)
+        {
+            currentBuffer = "";
+            updateDisplay();
+        }
+
+        public void btnNum_Click(object sender, EventArgs e)
+        {
+            currentBuffer = currentBuffer + ((Button)sender).Text;
+            updateDisplay();
+
+        }
+
+
+        public void btnBackSpace_Click(object sender, EventArgs e)
+        {
+            if(currentBuffer.Length>0)
+            {
+                currentBuffer = currentBuffer.Substring(0, currentBuffer.Length - 1);  // This can be done smarter - just gotta look up how.
+            }
+            updateDisplay();
+        }
+
+        public void btnOper_Click(object sender, EventArgs e)
+        {
+            expression = expression + currentBuffer + ((Button)sender).Text;
+            //if (Double.TryParse(txtDisplay.Text, out firstNum))
+            //{
+            //    Button button = (Button)sender;
+            //    op = button.Text;
+            //    isOpClicked = true;
+            //    txtDisplay.Text = "";
+            //} else
+            //{
+            //    txtDisplay.Text = "";
+            //}
                           
 
         }
 
-        private void btnEquals_Click(object sender, EventArgs e)
+        public void btnEquals_Click(object sender, EventArgs e)
         {
-            if (Double.TryParse(txtDisplay.Text, out secondNum))
-            {
-                double result = 0;
+            //if (Double.TryParse(txtDisplay.Text, out secondNum))
+            //{
+            //    double result = 0;
 
-                switch (op)
-                {
-                    case "+":
-                        result = firstNum + secondNum;
+            //    switch (op)
+            //    {
+            //        case "+":
+            //            result = firstNum + secondNum;
 
-                        break;
-                    case "-":
-                        result = firstNum - secondNum;
+            //            break;
+            //        case "-":
+            //            result = firstNum - secondNum;
 
-                        break;
-                    case "*":
-                        result = firstNum * secondNum;
+            //            break;
+            //        case "*":
+            //            result = firstNum * secondNum;
 
-                        break;
-                    case "/":
-                        if (secondNum != 0)
-                        {
-                            result = firstNum / secondNum;
+            //            break;
+            //        case "/":
+            //            if (secondNum != 0)
+            //            {
+            //                result = firstNum / secondNum;
 
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                txtDisplay.Text = result.ToString();
-                firstNum = 0;
-                secondNum = 0;
-                op = "";
-            }
+            //            }
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //    txtDisplay.Text = result.ToString();
+            //    firstNum = 0;
+            //    secondNum = 0;
+            //    op = "";
+            //}
             
         }
 

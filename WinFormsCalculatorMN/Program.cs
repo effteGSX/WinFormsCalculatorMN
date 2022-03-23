@@ -1,3 +1,4 @@
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("WinFormsCalculatorMNTests")]
 namespace WinFormsCalculatorMN
 {
     internal static class Program

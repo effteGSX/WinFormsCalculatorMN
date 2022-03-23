@@ -56,11 +56,12 @@
             // txtDisplay
             // 
             this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDisplay.Location = new System.Drawing.Point(12, 21);
+            this.txtDisplay.Location = new System.Drawing.Point(17, 35);
+            this.txtDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(347, 41);
+            this.txtDisplay.Size = new System.Drawing.Size(494, 66);
             this.txtDisplay.TabIndex = 0;
             this.txtDisplay.Text = "0";
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -68,9 +69,10 @@
             // btnBackSpace
             // 
             this.btnBackSpace.Font = new System.Drawing.Font("Wingdings", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnBackSpace.Location = new System.Drawing.Point(24, 88);
+            this.btnBackSpace.Location = new System.Drawing.Point(34, 147);
+            this.btnBackSpace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBackSpace.Name = "btnBackSpace";
-            this.btnBackSpace.Size = new System.Drawing.Size(75, 73);
+            this.btnBackSpace.Size = new System.Drawing.Size(107, 122);
             this.btnBackSpace.TabIndex = 1;
             this.btnBackSpace.Text = "";
             this.btnBackSpace.UseVisualStyleBackColor = true;
@@ -79,9 +81,10 @@
             // btnC
             // 
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnC.Location = new System.Drawing.Point(186, 88);
+            this.btnC.Location = new System.Drawing.Point(266, 147);
+            this.btnC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(75, 73);
+            this.btnC.Size = new System.Drawing.Size(107, 122);
             this.btnC.TabIndex = 1;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
@@ -90,9 +93,10 @@
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn1.Location = new System.Drawing.Point(24, 325);
+            this.btn1.Location = new System.Drawing.Point(34, 542);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(75, 73);
+            this.btn1.Size = new System.Drawing.Size(107, 122);
             this.btn1.TabIndex = 1;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
@@ -101,19 +105,22 @@
             // btnCE
             // 
             this.btnCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCE.Location = new System.Drawing.Point(105, 88);
+            this.btnCE.Location = new System.Drawing.Point(150, 147);
+            this.btnCE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCE.Name = "btnCE";
-            this.btnCE.Size = new System.Drawing.Size(75, 73);
+            this.btnCE.Size = new System.Drawing.Size(107, 122);
             this.btnCE.TabIndex = 1;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btn7
             // 
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn7.Location = new System.Drawing.Point(24, 167);
+            this.btn7.Location = new System.Drawing.Point(34, 278);
+            this.btn7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(75, 73);
+            this.btn7.Size = new System.Drawing.Size(107, 122);
             this.btn7.TabIndex = 1;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
@@ -122,9 +129,10 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn0.Location = new System.Drawing.Point(24, 404);
+            this.btn0.Location = new System.Drawing.Point(34, 673);
+            this.btn0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(75, 73);
+            this.btn0.Size = new System.Drawing.Size(107, 122);
             this.btn0.TabIndex = 1;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn4.Location = new System.Drawing.Point(24, 246);
+            this.btn4.Location = new System.Drawing.Point(34, 410);
+            this.btn4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(75, 73);
+            this.btn4.Size = new System.Drawing.Size(107, 122);
             this.btn4.TabIndex = 1;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
@@ -144,9 +153,10 @@
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn9.Location = new System.Drawing.Point(186, 167);
+            this.btn9.Location = new System.Drawing.Point(266, 278);
+            this.btn9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(75, 73);
+            this.btn9.Size = new System.Drawing.Size(107, 122);
             this.btn9.TabIndex = 1;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
@@ -155,9 +165,10 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn2.Location = new System.Drawing.Point(105, 325);
+            this.btn2.Location = new System.Drawing.Point(150, 542);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(75, 73);
+            this.btn2.Size = new System.Drawing.Size(107, 122);
             this.btn2.TabIndex = 1;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
@@ -166,9 +177,10 @@
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn6.Location = new System.Drawing.Point(186, 246);
+            this.btn6.Location = new System.Drawing.Point(266, 410);
+            this.btn6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(75, 73);
+            this.btn6.Size = new System.Drawing.Size(107, 122);
             this.btn6.TabIndex = 1;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
@@ -177,9 +189,10 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn8.Location = new System.Drawing.Point(105, 167);
+            this.btn8.Location = new System.Drawing.Point(150, 278);
+            this.btn8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(75, 73);
+            this.btn8.Size = new System.Drawing.Size(107, 122);
             this.btn8.TabIndex = 1;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
@@ -188,9 +201,10 @@
             // btnDec
             // 
             this.btnDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDec.Location = new System.Drawing.Point(105, 404);
+            this.btnDec.Location = new System.Drawing.Point(150, 673);
+            this.btnDec.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDec.Name = "btnDec";
-            this.btnDec.Size = new System.Drawing.Size(75, 73);
+            this.btnDec.Size = new System.Drawing.Size(107, 122);
             this.btnDec.TabIndex = 1;
             this.btnDec.Text = ".";
             this.btnDec.UseVisualStyleBackColor = true;
@@ -199,9 +213,10 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn5.Location = new System.Drawing.Point(105, 246);
+            this.btn5.Location = new System.Drawing.Point(150, 410);
+            this.btn5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(75, 73);
+            this.btn5.Size = new System.Drawing.Size(107, 122);
             this.btn5.TabIndex = 1;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
@@ -210,9 +225,10 @@
             // btnPlusMinus
             // 
             this.btnPlusMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPlusMinus.Location = new System.Drawing.Point(267, 87);
+            this.btnPlusMinus.Location = new System.Drawing.Point(381, 145);
+            this.btnPlusMinus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPlusMinus.Name = "btnPlusMinus";
-            this.btnPlusMinus.Size = new System.Drawing.Size(75, 73);
+            this.btnPlusMinus.Size = new System.Drawing.Size(107, 122);
             this.btnPlusMinus.TabIndex = 1;
             this.btnPlusMinus.Text = "±";
             this.btnPlusMinus.UseVisualStyleBackColor = true;
@@ -221,9 +237,10 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(267, 167);
+            this.btnAdd.Location = new System.Drawing.Point(381, 278);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 73);
+            this.btnAdd.Size = new System.Drawing.Size(107, 122);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -232,9 +249,10 @@
             // btnSub
             // 
             this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSub.Location = new System.Drawing.Point(267, 246);
+            this.btnSub.Location = new System.Drawing.Point(381, 410);
+            this.btnSub.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSub.Name = "btnSub";
-            this.btnSub.Size = new System.Drawing.Size(75, 73);
+            this.btnSub.Size = new System.Drawing.Size(107, 122);
             this.btnSub.TabIndex = 1;
             this.btnSub.Text = "-";
             this.btnSub.UseVisualStyleBackColor = true;
@@ -266,16 +284,18 @@
             this.panel1.Controls.Add(this.btn1);
             this.panel1.Controls.Add(this.btn0);
             this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 505);
+            this.panel1.Size = new System.Drawing.Size(533, 839);
             this.panel1.TabIndex = 0;
             // 
             // btnDiv
             // 
             this.btnDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDiv.Location = new System.Drawing.Point(267, 404);
+            this.btnDiv.Location = new System.Drawing.Point(381, 673);
+            this.btnDiv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDiv.Name = "btnDiv";
-            this.btnDiv.Size = new System.Drawing.Size(75, 73);
+            this.btnDiv.Size = new System.Drawing.Size(107, 122);
             this.btnDiv.TabIndex = 1;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
@@ -284,9 +304,10 @@
             // btnEquals
             // 
             this.btnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEquals.Location = new System.Drawing.Point(186, 404);
+            this.btnEquals.Location = new System.Drawing.Point(266, 673);
+            this.btnEquals.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEquals.Name = "btnEquals";
-            this.btnEquals.Size = new System.Drawing.Size(75, 73);
+            this.btnEquals.Size = new System.Drawing.Size(107, 122);
             this.btnEquals.TabIndex = 1;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
@@ -295,9 +316,10 @@
             // btnMulti
             // 
             this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMulti.Location = new System.Drawing.Point(267, 325);
+            this.btnMulti.Location = new System.Drawing.Point(381, 542);
+            this.btnMulti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMulti.Name = "btnMulti";
-            this.btnMulti.Size = new System.Drawing.Size(75, 73);
+            this.btnMulti.Size = new System.Drawing.Size(107, 122);
             this.btnMulti.TabIndex = 1;
             this.btnMulti.Text = "*";
             this.btnMulti.UseVisualStyleBackColor = true;
@@ -306,9 +328,10 @@
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn3.Location = new System.Drawing.Point(186, 325);
+            this.btn3.Location = new System.Drawing.Point(266, 542);
+            this.btn3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(75, 73);
+            this.btn3.Size = new System.Drawing.Size(107, 122);
             this.btn3.TabIndex = 1;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
@@ -316,11 +339,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 506);
+            this.ClientSize = new System.Drawing.Size(534, 843);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
