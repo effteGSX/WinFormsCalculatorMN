@@ -19,6 +19,7 @@ namespace WinFormsCalculatorMN
         private void updateDisplay() // The update mechanism could be improved - events, yada yada
         {
             txtDisplay.Text = currentBuffer;
+            txtExpression.Text = expression;
         }
 
         public void btnDec_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace WinFormsCalculatorMN
             currentBuffer = currentBuffer + ((Button)sender).Text;
             updateDisplay();
 
-        }
+            }
 
 
         public void btnBackSpace_Click(object sender, EventArgs e)
@@ -76,7 +77,15 @@ namespace WinFormsCalculatorMN
 
         public void btnOper_Click(object sender, EventArgs e)
         {
+            // Strip trailing decimal separator
+            if(currentBuffer.Length>0 && currentBuffer[currentBuffer.Length-1] == ci.NumberFormat.NumberDecimalSeparator[0])
+            {
+                currentBuffer = currentBuffer.Substring(0,currentBuffer.Length - 1);
+            }
+
             expression = expression + currentBuffer + ((Button)sender).Text;
+            currentBuffer = "";
+            updateDisplay();
             //if (Double.TryParse(txtDisplay.Text, out firstNum))
             //{
             //    Button button = (Button)sender;
@@ -93,6 +102,22 @@ namespace WinFormsCalculatorMN
 
         public void btnEquals_Click(object sender, EventArgs e)
         {
+            btnOper_Click(sender, e);
+
+            // Strip trailing operators
+            if( !Char.IsNumber(expression[expression.Length-1]) )
+                {
+                    expression = expression.Substring(0,expression.Length-1);
+                }
+
+
+            // Todo: Exception handling probably badly needed  here
+            var result = new System.Data.DataTable().Compute(expression, "");
+            expression = "";
+            currentBuffer = result.ToString();
+            updateDisplay();
+
+            // Evaluate expression here
             //if (Double.TryParse(txtDisplay.Text, out secondNum))
             //{
             //    double result = 0;
